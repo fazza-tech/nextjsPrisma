@@ -38,7 +38,19 @@ export default function AuthButton() {
                         {session.user.name || session.user.email}
                     </span>
                 </div>
-                <Button variant="outline" size="sm" onClick={() => signOut()}>
+                <Button
+                    variant="outline"
+                    size="sm"
+                    onClick={async () => {
+                        await signOut({
+                            fetchOptions: {
+                                onSuccess: () => {
+                                    window.location.href = "/";
+                                },
+                            },
+                        });
+                    }}
+                >
                     <LogOut className="w-4 h-4 mr-2" />
                     Sign Out
                 </Button>

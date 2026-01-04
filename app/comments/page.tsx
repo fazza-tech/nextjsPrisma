@@ -3,10 +3,12 @@ import { Button } from "@/components/ui/button";
 import prisma from "@/lib/db";
 import { ArrowLeft } from "lucide-react";
 import Link from "next/link";
+import CommentForm from "@/components/comment-form";
+import CommentList from "@/components/comment-list";
 
 export default async function Comments() {
 
-    const posts = await prisma.comment.findMany({
+    const comments = await prisma.comment.findMany({
         include: {
             user: true
         },
@@ -25,8 +27,12 @@ export default async function Comments() {
                     </Link>
                 </Button>
                 <h1 className="text-3xl font-bold mb-4">Comments</h1>
-                <p className="text-muted-foreground mb-4">Sign in to add a comment or message</p>
-                <AuthButton />
+                <CommentForm />
+
+                <div className="mt-12">
+                    <h2 className="text-2xl font-bold mb-4">All Comments {comments.length}</h2>
+                    <CommentList comments={comments} />
+                </div>
             </div>
         </main>
     );
