@@ -3,9 +3,9 @@ import prisma from "@/lib/db";
 async function main() {
   const blogPosts = [
     {
-    slug: 'what-is-tailwindcss',
-    title: 'What Is Tailwind CSS?',
-    content: `# What Is Tailwind CSS?
+      slug: 'what-is-tailwindcss',
+      title: 'What Is Tailwind CSS?',
+      content: `# What Is Tailwind CSS?
 Tailwind CSS is a utility-first CSS framework that makes styling fast and consistent.
 
 ## Benefits
@@ -16,9 +16,9 @@ Tailwind CSS is a utility-first CSS framework that makes styling fast and consis
 **Tip:** Combine Tailwind with Next.js for a smooth workflow.`,
     },
     {
-    slug: 'getting-started-with-prisma',
-    title: 'Getting Started with Prisma',
-    content: `# Getting Started with Prisma
+      slug: 'getting-started-with-prisma',
+      title: 'Getting Started with Prisma',
+      content: `# Getting Started with Prisma
 Prisma is a modern ORM for Node.js and TypeScript that makes database work easier.
 
 ## What You Can Do
