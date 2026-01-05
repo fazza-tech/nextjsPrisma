@@ -117,7 +117,7 @@ export function AuthPage() {
 							)}
 							Continue with Google
 						</Button>
-						<Button
+						{/* <Button
 							className="w-full"
 							size="lg"
 							type="button"
@@ -130,7 +130,7 @@ export function AuthPage() {
 								<AppleIcon />
 							)}
 							Continue with Apple
-						</Button>
+						</Button> */}
 						<Button
 							className="w-full"
 							size="lg"
